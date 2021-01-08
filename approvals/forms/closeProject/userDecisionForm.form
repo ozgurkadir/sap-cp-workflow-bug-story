@@ -1,0 +1,62 @@
+{
+    "id": "userdecisionform",
+    "schemaVersion": "1.1.0",
+    "name": "userDecisionForm",
+    "revision": "1.0",
+    "type": "task",
+    "readOnly": false,
+    "content": [
+        {
+            "id": "first_name",
+            "type": "string",
+            "label": "Project Description",
+            "readOnly": false,
+            "value": "${context.Projects.description}",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "id": "project_name",
+            "type": "string",
+            "label": "Project Name",
+            "readOnly": false,
+            "value": "${context.Projects.projectName}",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "id": "start_date",
+            "type": "string",
+            "label": "Start Date",
+            "readOnly": false,
+            "value": "${context.Projects.actualStartDate}",
+            "constraints": {
+                "required": false
+            }
+        },
+        {
+            "id": "end_date",
+            "type": "string",
+            "label": "End Date",
+            "readOnly": false,
+            "value": "${context.Projects.actualEndDate}",
+            "constraints": {
+                "required": false
+            }
+        }
+    ],
+    "decisions": [
+        {
+            "id": "approve",
+            "text": "Approve",
+            "decisionType": "positive"
+        },
+        {
+            "id": "reject",
+            "text": "Reject",
+            "decisionType": "negative"
+        }
+    ]
+}

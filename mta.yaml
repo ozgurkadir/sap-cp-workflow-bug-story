@@ -6,11 +6,11 @@ modules:
     type: com.sap.application.content
     path: approvals
     requires:
-      - name: workflow_mta
+      - name: bug_story_workflow
         parameters:
           content-target: true
 resources:
-  - name: workflow_mta
+  - name: bug_story_workflow
     parameters:
       service-plan: lite
       service: workflow
